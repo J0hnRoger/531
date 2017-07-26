@@ -1,7 +1,6 @@
 import React from 'react';
 import { Redirect, Route } from 'react-router-dom';
 
-
 // https://gist.github.com/fdidron/ebcf52dc1ed62ff7d80725854d631a9e
 //Mock of an Auth method, can be replaced with an async call to the backend. Must return true or false
 const isAuthenticated = () => false;

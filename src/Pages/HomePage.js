@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {Input} from '@blueprintjs/core'
+import {Link} from 'react-router-dom'
 
 import 'normalize.css/normalize.css'
 import '@blueprintjs/core/dist/blueprint.css'
 
-class LoginPage extends React.Component {
+class HomePage extends React.Component {
   
     static isPrivate = false
     
@@ -14,14 +15,17 @@ class LoginPage extends React.Component {
 
     render() {
         return (
-        <div className="login">
+        <div className="home">
             It's too calm here
+            <Link className="pt-button pt-intent-primary" to="/build"  >
+                Give me my program!
+            </Link>
         </div>
         );
     }
 }
 
-LoginPage.propTypes = {
+HomePage.propTypes = {
 };
 
-export default LoginPage;
+export default HomePage;

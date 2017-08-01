@@ -1,5 +1,5 @@
 // Une WorkWeek est composée d'un numéro (position dans le cycle), 
-// ainsi que d'une liste de 4 Workout (chacun avec une exo, ainsi qu'un Record qui est null si la séance n'a pas été effectuée)
+// ainsi que d'une liste de 4 Workout (chacun avec un exo, ainsi qu'un Record qui est null si la séance n'a pas été effectuée)
 // on défini le nombre de reps à faire en fonction de la cyclepos et les poids en fonction de la cyclePos 
 import WorkWeek from './WorkWeek'
 import {WORKOUTS, CYCLE_POS} from './531.const'

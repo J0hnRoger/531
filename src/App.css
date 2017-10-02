@@ -9,7 +9,6 @@
 
 .App-header {
   background-color: #222;
-  height: 180px;
   padding: 20px;
   color: white;
 }
@@ -22,4 +21,23 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+/** Login **/
+.header--login {
+  height: 35px;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+.header--login .mini.ui.image {
+  height: 35px;
+}
+
+.header--login .content{
+  margin-left: 15px;
+}
+.header--login .sub.header {
+  color: white;
 }

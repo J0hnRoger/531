@@ -9,7 +9,7 @@ import configureStore from "./Store/configureStore";
 
 // Create browser history to use in the Redux store
 const history = createBrowserHistory();
-debugger
+
 const store = configureStore(history);
 
 class App extends React.Component {

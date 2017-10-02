@@ -1,17 +1,15 @@
 import * as React from 'react';
 import { RouteComponentProps } from 'react-router-dom';
+import CalculateMyRM from '../Features/BuildProgram/CalculateMyRM/CalculateMyRM';
 
-export default class HomePage extends React.Component<RouteComponentProps<{}>, {}> {
+export default class Login extends React.Component<RouteComponentProps<{}>, {}> {
     public render() {
         return <div>
-            <div className="home-header">
-
-            </div>
             <h1 className="page--title">
-                Home
+                Program Builder
             </h1>
             <div className="page--content">
-                Hello World
+                <CalculateMyRM /> 
             </div>
         </div>;
     }

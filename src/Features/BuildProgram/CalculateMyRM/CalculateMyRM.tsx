@@ -22,11 +22,11 @@ export default class CalculateMyRM extends React.Component<CalculateMyRMProps, a
          <Form>
             <Form.Field>
             <label>Poids :</label>
-            <input placeholder='Poids ?' />
+            <input placeholder='Poids soulevé ?' />
             </Form.Field>
             <Form.Field>
             <label>Nombre de rep'? </label>
-            <input placeholder='' />
+            <input placeholder='Nombre de fois ?' />
             </Form.Field>
             <Button type='submit' onClick={this.calculate} >Calcules moi ça!</Button>
         </Form>

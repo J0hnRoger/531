@@ -1,23 +1,25 @@
 import * as React from 'react';
+import { Provider } from 'react-redux';
 import './App.css';
-import CalculateMyRM from './Features/BuildProgram/CalculateMyRM/CalculateMyRM';
+import { ConnectedRouter } from 'react-router-redux';
+import { routes } from './Routes';
+import { createBrowserHistory } from 'history';
 
-const logo = require('./logo.png');
+import configureStore from "./Store/configureStore";
+
+// Create browser history to use in the Redux store
+const history = createBrowserHistory();
+debugger
+const store = configureStore(history);
 
 class App extends React.Component {
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Fais-toi des muscle!</h2>
-        </div>
-        <div className="App-intro">
-          <CalculateMyRM />
-        </div>
-      </div>
+      <Provider store={ store }>
+          <ConnectedRouter history={history} children={ routes } />
+      </Provider>
     );
   }
 }
 
-export default App;
+export default App; 

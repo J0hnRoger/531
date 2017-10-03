@@ -1,0 +1,24 @@
+/**
+/* Component - Build Program Page 
+ **/
+
+.program-builder {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: grey;
+}
+
+.program-builder__section {
+    display: flex;
+    flex:1;
+}
+
+.program-builder__intro {
+    background-color: greenyellow;
+}
+
+.program-builder__content {
+    background-color: orange;
+    display: flex;
+}

@@ -7,13 +7,28 @@
     "react-dom": "^15.6.1"
   },
   "devDependencies": {
-    "react-scripts": "1.0.10"
+    "@types/jest": "^21.1.1",
+    "react-scripts": "1.0.10",
+    "ts-jest": "^21.0.1",
+    "typescript": "^2.5.3"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
+    "ts-test": "jest --watchAll",
     "eject": "react-scripts eject",
     "deploy": "surge ./build 531.jonathan-roger.fr"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(ts|tsx|js)?$"
   }
 }

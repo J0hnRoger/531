@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { RouteComponentProps } from 'react-router-dom';
 
+import ProgramView from '../Features/ShowProgram/Components/ProgramView'
+
 export default class HomePage extends React.Component<RouteComponentProps<{}>, {}> {
     public render() {
         return <div>
@@ -11,7 +13,7 @@ export default class HomePage extends React.Component<RouteComponentProps<{}>, {
                 Home
             </h1>
             <div className="page--content">
-                Hello World
+                <ProgramView programExists={false}/>
             </div>
         </div>;
     }

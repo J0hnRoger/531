@@ -45,25 +45,36 @@
     "whatwg-fetch": "2.0.3"
   },
   "devDependencies": {
+    "@types/jest": "^21.1.1",
+    "react-scripts": "1.0.10",
+    "ts-jest": "^21.0.1",
+    "typescript": "^2.5.3",
     "react-addons-css-transition-group": "^15.6.0"
   },
   "scripts": {
-    "start": "node scripts/start.js",
-    "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "ts-test": "jest --watchAll",
+    "eject": "react-scripts eject",
     "deploy": "surge ./build 531.jonathan-roger.fr"
   },
   "jest": {
-    "collectCoverageFrom": [
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+   "collectCoverageFrom": [
       "src/**/*.{js,jsx}"
     ],
     "setupFiles": [
       "<rootDir>/config/polyfills.js"
     ],
-    "testMatch": [
-      "<rootDir>/src/**/__tests__/**/*.js?(x)",
-      "<rootDir>/src/**/?(*.)(spec|test).js?(x)"
-    ],
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(ts|tsx|js)?$",
     "testEnvironment": "node",
     "testURL": "http://localhost",
     "transform": {

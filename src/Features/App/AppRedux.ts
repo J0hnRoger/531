@@ -2,10 +2,10 @@
  * App Reducers - Catch all system/ application events
  */
 
-export const actionTypes = {
-  ERROR: "APP/ERROR",
-  INIT: "APP/INIT",
-  MESSAGE: "APP/MESSAGE",
+export enum ActionTypes {
+  ERROR = "APP/ERROR",
+  INIT = "APP/INIT",
+  MESSAGE = "APP/MESSAGE",
 };
 
 // The application state object
@@ -17,11 +17,16 @@ const initialState = {
 
 export default function appReducer( state: ApplicationState = initialState, action: any) {
     switch (action.type) {
-        case actionTypes.ERROR:
-        case actionTypes.MESSAGE:
-        case actionTypes.INIT:
+        case ActionTypes.ERROR:
+        case ActionTypes.MESSAGE:
+        case ActionTypes.INIT:
             return { ...state };
         default:
             return state;
     }
 }
+
+export const actionCreators = {
+    login: () => ({ type: ActionTypes.INIT }),
+    createBanner: (newBanner : Banner) => ({ type : actionTypes.CREATE_BANNER, newBanner }),
+};

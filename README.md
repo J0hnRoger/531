@@ -16,6 +16,9 @@
 
 ## In Progress 
 
+-> Login -> add actionCreator for login and return the user and display him on login comp 
+
+- When he is logged, if he has no program yet, we show him the program builder
 - A user can know his 1RM based on a number of repetitions
 
 ## Folder Structure

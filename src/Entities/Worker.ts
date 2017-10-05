@@ -6,7 +6,7 @@
     login: string;
     program: null;
 
-    constructor(login) {
+    constructor(login: string) {
         this.login = login;
     }
  }

@@ -5,10 +5,10 @@
  import Worker from '../Entities/Worker';
 
  class WorkerApi {
-     static GetCurrentWorker (login: string, password: string) {
-       setTimeout(() => {
-        return new Worker('John Doe');
-       }, 1000)
+     public GetCurrentWorker (login: string, password: string) {
+       return new Promise((resolve) => {
+           resolve(new Worker('John Doe'))
+       });
      }
  }
 

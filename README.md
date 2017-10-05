@@ -16,7 +16,8 @@
 
 ## In Progress 
 
--> Login -> add actionCreator for login and return the user and display him on login comp 
+-> Login -> branch the Login page form to the Log action (actionCreator -> Sagas -> api)
+-> Login -> hide the Login comp / or display a message  when we have no worker connected.
 
 - When he is logged, if he has no program yet, we show him the program builder
 - A user can know his 1RM based on a number of repetitions

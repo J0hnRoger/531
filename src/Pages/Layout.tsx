@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 
-import Login from '../Features/Login/Login';
+import Login from '../Features/User/Login';
 
 const logo = require('../logo.png');
 

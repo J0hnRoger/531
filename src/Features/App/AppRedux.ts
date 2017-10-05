@@ -27,6 +27,4 @@ export default function appReducer( state: ApplicationState = initialState, acti
 }
 
 export const actionCreators = {
-    login: () => ({ type: ActionTypes.INIT }),
-    createBanner: (newBanner : Banner) => ({ type : actionTypes.CREATE_BANNER, newBanner }),
 };

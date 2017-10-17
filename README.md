@@ -12,15 +12,21 @@
 - A program is a succession of cycles
 - A cycle is divide into 4 weeks
 - A week contains 4 Sessions
-- A Session is a chain of 4 main lifts    
+- A Session is a chain of 4 main lifts
 
 ## In Progress 
+-> Use business class for initialize the program of the user when he is logged
+-> Manage the form for display 4 area, one per lift
+-> Manage form for allow user to fill his maxes
 
+- A user can know his 1RM based on a number of repetitions
+- When he is logged, if he has no program yet, we show him the program builder
+
+## Done 
 -> Login -> branch the Login page form to the Log action (actionCreator -> Sagas -> api)
 -> Login -> hide the Login comp / or display a message  when we have no worker connected.
 
-- When he is logged, if he has no program yet, we show him the program builder
-- A user can know his 1RM based on a number of repetitions
+
 
 ## Folder Structure
 

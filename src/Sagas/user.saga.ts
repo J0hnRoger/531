@@ -1,11 +1,11 @@
 /**
  * User Sagas - Call User API for retrieve current user informations
  */
-import {ActionTypes as appActionTypes } from "../features/App/AppRedux";
-import {ActionTypes as userActionsTypes } from "../features/User/UserRedux";
+import {ActionTypes as appActionTypes } from "../Features/App/AppRedux";
+import {ActionTypes as userActionsTypes } from "../Features/User/UserRedux";
 
 import { put, call } from 'redux-saga/effects';
-import WorkerApi from "../api/WorkerApi";
+import WorkerApi from "../Api/WorkerApi";
 
 export function* loginAsync() {
   try {
@@ -14,4 +14,4 @@ export function* loginAsync() {
   } catch (error) {
     yield put({type: appActionTypes.ERROR, error: error.message});
   } 
-} 
+}  

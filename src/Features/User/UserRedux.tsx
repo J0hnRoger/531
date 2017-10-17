@@ -3,6 +3,7 @@
  */
 import { Reducer } from "redux";
 import {UserState} from '../../Store';
+import Worker from '../../Entities/Worker';
 
 export enum ActionTypes {
    LOGIN = "USER/LOGIN",
@@ -31,7 +32,7 @@ export type UserActions =
     | OtherAction;
 
 const initialState = {
-
+    currentWorker: undefined
 };
   
 const userReducer: Reducer<UserState> = ( state: UserState = initialState, action: UserActions) => {

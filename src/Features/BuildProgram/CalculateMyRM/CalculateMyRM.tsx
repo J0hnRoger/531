@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Form, Button, Container, Label, Divider } from 'semantic-ui-react' 
+import { Form, Button, Container, Label, Divider } from 'semantic-ui-react'
 
 export interface CalculateMyRMProps {
 

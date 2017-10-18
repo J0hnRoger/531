@@ -1,3 +1,5 @@
+import { ApplicationState } from "../../Store";
+
 /**
  * App Reducers - Catch all system/ application events
  */
@@ -7,10 +9,6 @@ export enum ActionTypes {
   INIT = "APP/INIT",
   MESSAGE = "APP/MESSAGE",
 };
-
-// The application state object
-export interface ApplicationState {
-}
 
 const initialState = {
 };

@@ -15,6 +15,9 @@
 - A Session is a chain of 4 main lifts
 
 ## In Progress 
+-> Brancher le mapdispatch sur le calcul du 1RM, pour mettre également dans le Worker son programme s'il n'existe pas
+-> trouver un système pour faire de même pour les 4 Lifts
+-> Refondre l'interface pour avoir 4 zones comme sur les IHM
 -> Use business class for initialize the program of the user when he is logged
 -> Manage the form for display 4 area, one per lift
 -> Manage form for allow user to fill his maxes

@@ -3,13 +3,13 @@ import { applyMiddleware, compose, createStore, GenericStoreEnhancer, Store } fr
 import rootReducer from "../Features/reducers";
 
 import { History } from 'history';
-import { ApplicationState } from '../Features/App/AppRedux';
 
 // Sagas
 import createSagaMiddleware from 'redux-saga';
 const sagaMiddleware = createSagaMiddleware();
 
 import rootSaga from "../Sagas/";
+import { ApplicationState } from './';
 
 export default function configureStore(history: History, initialState?: ApplicationState) {
     // Build middleware. These are functions that can process the actions before they reach the store.

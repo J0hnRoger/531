@@ -5,6 +5,7 @@
  class Worker {
     login: string;
     program: null;
+    planning: null;
 
     constructor(login: string) {
         this.login = login;

@@ -1,16 +1,20 @@
 import * as React from 'react';
 import {connect} from 'react-redux';
+import { actionCreators } from '../ProgramRedux'
 import { Form, Button, Container, Divider, Message } from 'semantic-ui-react'
 
-export interface CalculateMyRMProps {
 
+export interface ReduxProps {
+  onCalculate: (weight: number, nbReps: number) => any;
 }
 
-class CalculateMyRM extends React.Component<CalculateMyRMProps, any> {
+class CalculateMyRM extends React.Component<ReduxProps, any> {
   state = {
     result: 0,
     loading: false,
     success: false,
+    weight: 0,
+    nbReps: 0
   }
 
   onChange = (event: any) => {
@@ -23,6 +27,7 @@ class CalculateMyRM extends React.Component<CalculateMyRMProps, any> {
   }
 
   calculate = () => {
+    this.props.onCalculate && this.props.onCalculate(this.state.weight, this.state.nbReps)
     this.setState({
       success: true
     })
@@ -56,5 +61,8 @@ class CalculateMyRM extends React.Component<CalculateMyRMProps, any> {
   }
 }
 
-
-export default connect({})(CalculateMyRM)
+export default connect(null,
+  {
+    onCalculate: actionCreators.calculateRM
+  }
+)(CalculateMyRM) 

@@ -3,12 +3,14 @@
  */
 
  class Worker {
-    login: string;
+    Id: number;
+    Login: string;
     program: null;
     planning: null;
 
-    constructor(login: string) {
-        this.login = login;
+    constructor(json: any) {
+        this.Login = json.Login;
+        this.Id = json.Id;
     }
  }
 

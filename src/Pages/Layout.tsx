@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 
-import Login from '../Features/User/Login';
+import { ConnectedLogin } from '../Features/User/ConnectedLogin';
 
 const logo = require('../logo.png');
 
@@ -10,7 +10,7 @@ export class Layout extends React.Component<{}, {}> {
         return <div className="App ui-grid">
         <div className="App-header">
           <div className="row">
-            <Login />
+            <ConnectedLogin />
           </div>
           <div className="row">
             <Link to={ '/home' }>

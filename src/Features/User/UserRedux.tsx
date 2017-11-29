@@ -7,6 +7,7 @@ import Worker from '../../Entities/Worker';
 
 export enum ActionTypes {
    LOGIN = "USER/LOGIN",
+   LOGIN_FAILED = "USER/LOGIN_FAILED",
    LOGIN_SUCESS = "USER/LOGIN_SUCCESS",
    OTHER = "USER/OTHER",
 };
@@ -14,7 +15,12 @@ export enum ActionTypes {
 export interface LoginAction {
     type: ActionTypes.LOGIN;
     login: string;
-    pass: string;
+    password: string;
+}
+
+export interface LoginFailedAction {
+    type: ActionTypes.LOGIN_FAILED;
+    error: string;
 }
 
 export interface LoginSuccessAction {
@@ -28,18 +34,17 @@ export interface OtherAction {
 
 export type UserActions = 
     | LoginAction
+    | LoginFailedAction
     | LoginSuccessAction
     | OtherAction;
 
 const initialState = {
-    currentWorker: undefined
+    currentWorker: undefined,
 };
   
 const userReducer: Reducer<UserState> = ( state: UserState = initialState, action: UserActions) => {
       switch (action.type) {
-        case ActionTypes.LOGIN:
-            return { ...state, login: action.login, pass: action.pass };
-        case ActionTypes.LOGIN_SUCESS:
+            case ActionTypes.LOGIN_SUCESS:
             return { ...state, currentWorker: action.worker };
         default:
             return state;
@@ -49,5 +54,5 @@ const userReducer: Reducer<UserState> = ( state: UserState = initialState, actio
   export default userReducer;
 
   export const actionCreators = {
-      login: (login: string, pass: string ) => ({ type : ActionTypes.LOGIN, login, pass }),
+      login: (login: string, password: string ) => ({ type : ActionTypes.LOGIN, login, password }),
   };

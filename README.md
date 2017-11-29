@@ -15,9 +15,7 @@
 - A Session is a chain of 4 main lifts
 
 ## In Progress 
-
--> voir pourquoi le login et password est vide dans la soumission de formulaire de login
--> bien penser à l'adresse du server, en dur dans le service pour l'instant
+    - Afficher le retour du webservice de login dans le connected component
 
 -> Brancher le mapdispatch sur le calcul du 1RM, pour mettre également dans le Worker son programme s'il n'existe pas
 -> trouver un système pour faire de même pour les 4 Lifts
